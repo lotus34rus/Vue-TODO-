@@ -34,7 +34,6 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch("fetchAllTasks");
     this.tasks = this.$store.getters.getTasks.reverse();
     setTimeout(() => {
       this.loading = false

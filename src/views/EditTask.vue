@@ -43,7 +43,6 @@ export default {
 
     mounted() {
         const task_id = this.$route.params.id 
-        // console.log(this.$store.getters.getTaskByID(task_id));
         this.task = this.$store.getters.getTaskByID(task_id)
         this.statuses = this.$store.getters.getStatuses
     },
@@ -60,7 +59,7 @@ export default {
             this.$store.dispatch('removeTask', this.task.id)
             this.$router.push('/')
         }
-        
+
     }
 }
 </script>
