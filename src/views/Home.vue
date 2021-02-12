@@ -1,18 +1,28 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Список задач</h1>
+
+    <Tasks></Tasks>
+
+    <div class="add_btn">
+        <button @click="$router.push('/add')">Добавить задачу</button>
+    </div>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Tasks from '@/components/Tasks'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Tasks
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>
